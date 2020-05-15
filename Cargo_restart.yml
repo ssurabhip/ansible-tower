@@ -1,0 +1,9 @@
+---
+- name: Restart Cargo services
+  hosts: cargo
+  remote_user: app_user
+  tasks:
+  - name: Restart services
+    win_service:
+      name: Cargo Application
+      state: restarted
