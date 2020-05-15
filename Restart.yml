@@ -1,0 +1,9 @@
+---
+- name: Restart service
+  hosts: 172.17.138.15
+  remote_user: app_user
+  tasks:
+  - name: Restart Apache service
+    win_service:
+      name: Apache2.4
+      state: restarted
